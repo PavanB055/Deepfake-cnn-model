@@ -8,8 +8,8 @@ import gdown
 
 def download_model():
     # Use your extracted Google Drive file ID
-    url = 'https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE'  # Replace FILE_ID with your actual ID
-    gdown.download(url, 'deepfake_cnn_model.h5', quiet=False)
+gdown.download('https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE', 'deepfake_cnn_model.h5', quiet=False)
+
 
 # Call the function to download the model when the app starts
 download_model()
