@@ -6,9 +6,15 @@ from PIL import Image
 import time
 import gdown
 
+import gdown
+
 def download_model():
     # Use your extracted Google Drive file ID
-    gdown.download('https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE', 'deepfake_cnn_model.h5', quiet=False)
+    url = 'https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE'  # Replace FILE_ID with your actual ID
+    gdown.download(url, 'deepfake_cnn_model.h5', quiet=False)
+
+# Call the function to download the model when the app starts
+download_model()
 
 
 # Call the function to download the model when the app starts
