@@ -7,9 +7,9 @@ import time
 import gdown  # Only one import of gdown is needed
 
 def download_model():
-    # Use your extracted Google Drive file ID
+    # Indentation is correct here for the function body
     url = 'https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE'  # Replace FILE_ID with your actual ID
-    gdown.download(url, 'deepfake_cnn_model.h5', quiet=False)  # Ensure this line is indented correctly
+    gdown.download(url, 'deepfake_cnn_model.h5', quiet=False)  # Make sure this is indented
 
 # Call the function to download the model when the app starts
 download_model()
