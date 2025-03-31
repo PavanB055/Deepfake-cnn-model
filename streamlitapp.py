@@ -5,6 +5,19 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 import time
 
+import os
+import gdown
+
+def load_model():
+    model_path = "deepfake_cnn_model.h5"
+    file_id = "1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE"  # Replace with your actual Google Drive file ID
+
+    # Check if model exists, if not, download it
+    if not os.path.exists(model_path):
+        print("Downloading model from Google Drive...")
+        gdown.download(f"https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE", model_path, quiet=False)
+
+    return tf.keras.models.load_model(model_path)
 
 
 # Custom CSS with dark theme and glow effects
