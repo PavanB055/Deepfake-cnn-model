@@ -9,15 +9,22 @@ import os
 import gdown
 
 def load_model():
-    model_path = "deepfake_cnn_model.h5"
-    file_id = "1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE"  # Replace with your actual Google Drive file ID
+    import os
+    import gdown
 
-    # Check if model exists, if not, download it
+    model_path = "deepfake_cnn_model.h5"
+    file_id = "1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE"  # Your actual Google Drive file ID
+
+    # Check if model file exists, otherwise download it
     if not os.path.exists(model_path):
         print("Downloading model from Google Drive...")
-        gdown.download(f"https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE", model_path, quiet=False)
+        gdown.download(f"https://drive.google.com/uc?id={file_id}", model_path, quiet=False)
 
     return tf.keras.models.load_model(model_path)
+
+# Load model
+model = load_model()
+
 
 
 # Custom CSS with dark theme and glow effects
