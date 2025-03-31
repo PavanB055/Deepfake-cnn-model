@@ -8,17 +8,18 @@ import gdown
 
 import gdown
 
-
-import gdown
-
-# Function definition
 def download_model():
-    # Indented block inside the function
-    gdown.download('https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE', 'deepfake_cnn_model.h5', quiet=False)
+    # Use your extracted Google Drive file ID
+    url = 'https://drive.google.com/uc?id=FILE_ID'  # Replace FILE_ID with your actual ID
+    gdown.download(url, 'deepfake_cnn_model.h5', quiet=False)
 
-# Call the function to trigger the download
+# Call the function to download the model when the app starts
+
+def download_model():
+gdown.download('https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE', 'deepfake_cnn_model.h5', quiet=False)
+
+# Call the function to download the model when the app starts
 download_model()
-
 from tensorflow.keras.models import load_model
 
 def load_model_from_file():
