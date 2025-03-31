@@ -9,12 +9,14 @@ import gdown
 import gdown
 
 
-# Define the function to download the model
+import gdown
+
+# Function definition
 def download_model():
+    # Indented block inside the function
     gdown.download('https://drive.google.com/uc?id=1T1CCmIQb8ng8qsFWCQRKuLcPw3VysZsE', 'deepfake_cnn_model.h5', quiet=False)
 
-
-# Call the function to download the model when the app starts
+# Call the function to trigger the download
 download_model()
 
 from tensorflow.keras.models import load_model
